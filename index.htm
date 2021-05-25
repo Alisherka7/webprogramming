@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alisherka7</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+  body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  }
+
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/background3.jpg");
+    min-height: 75%;
+  }
+
+  .goal_id {
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+
+
+  <div class="top">
+    <div class="row padding black">
+      <div class="col s3">
+        <a href="#" class="button block black">MAIN</a>
+      </div>
+      <div class="col s3">
+        <a href="#about" class="button block black">ABOUT</a>
+      </div>
+      <div class="col s3">
+        <a href="#goal_id" class="button block black">GOALS</a>
+      </div>
+      <div class="col s3">
+        <a href="#where" class="button block black">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="bgimg display-container grayscale-min" id="home">
+    
+    <div class="display-middle center">
+      <span class="text-white" style="font-size:40px">컴퓨터공학과<br>19학번 알레셰르</span>
+    </div>
+    
+  </header>
+
+
+  <div class="sand grayscale large">
+
+    <!-- About Container -->
+    <div class="container" id="about">
+      <div class="content" style="max-width:700px">
+        <h5 class="center padding-64"><span class="tag wide">ABOUT MYSELF</span></h5>
+        <p> Hi there 👋 I am Ali, Junior developer and I specialize in solving algorithms and Mobile developing 💻📱⌚️</p>
+        <div class="panel leftbar light-grey">
+          <p><i>"Computers are good at following instructions, but not at reading your mind.</i></p>
+          <p>Donald Knuth</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="goal_id">
+      <div class="content" style="max-width:700px">
+
+        <h5 class="center padding-48"><span class="tag wide">GOALS</span></h5>
+
+        <div class="row center card padding">
+          <a href="javascript:void(0)" onclick="open1(event, 'goal');" id="myLink">
+            <div class="col s6 tablink">GOAL</div>
+          </a>
+          <a href="javascript:void(0)" onclick="open1(event, 'roadmap');">
+            <div class="col s6 tablink">MY ROADMAP</div>
+          </a>
+        </div>
+
+        <div id="goal" class="container goal_id padding-48 card">
+          <table border="2" style="width:100%">
+            <tr>
+              <th>my goal list</th>
+            </tr>
+            <tr>
+              <td>ENGLISH SKILL TOEFL: 800-900</td>
+            </tr>
+            <tr>
+              <td>한국어 능력시험 TOPIK: 6급</td>
+            </tr>
+             <tr>
+              <td>PROGRAMMING LANGUAGES: C, C++, Java, JavaScript, Python..etc</td>
+            </tr>
+            <tr>
+              <td>SUCCESSFUL ANDROID APP PROJECTS</td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="roadmap" class="container goal_id padding-48 card">
+          <img src="img/roadmap.jpg" style="width:100%;max-width:1000px;">
+          
+        </div>  
+       
+      </div>
+    </div>
+
+
+    <div class="container" id="where" style="padding-bottom:32px;">
+      <div class="content" style="max-width:700px">
+        <h5 class="center padding-48"><span class="tag wide">CONTACT</span></h5>
+        <p><span class="tag">Hi!</span> If you have any questions please contact me.</p>
+       
+        <form action="#">
+          <p><input class="input padding-16 border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="input padding-16 border" type="text" placeholder="Message" required name="Message"></p>
+          <p><button class="button black" type="submit">SEND MESSAGE</button></p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="center light-grey padding-48 large">
+    <p>github: <a href="https://github.com/Alisherka7">Alisherka7</a></p><br>
+  </footer>
+
+
+
+  <script>
+      function open1(evt, name) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("goal_id");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" dark-grey", "");
+        }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " dark-grey";
+      }
+      document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
